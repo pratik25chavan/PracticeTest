@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Base64;
 import java.util.Date;
 
+import org.junit.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -101,7 +102,8 @@ public class SRideMobileAppTest {
 
 		String refImageBase64 = getReferenceImageB64("carOwner.png");
 
-		assertEquals(driver.findElementByImage(refImageBase64).isDisplayed(), true);
+
+		Assert.assertEquals("Car Owner Sign is not Displayed",driver.findElementByImage(refImageBase64).isDisplayed(), true);
 
 		test.log(LogStatus.PASS, "Test Passed");
 
