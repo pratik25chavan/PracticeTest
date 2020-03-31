@@ -39,37 +39,35 @@ Build Extra Required Jars from Location: /Sride/Jars
 public class SRideMobileAppTest {
 
 	public static HomePage homePage;
-	
-	public static AndroidDriver driver ;
+
+	public static AndroidDriver driver;
 
 	public static MyRidesPage myRidesPage;
-	
-	 ExtentReports extent;
-	    ExtentTest test;
+
+	ExtentReports extent;
+	ExtentTest test;
 
 	public String getReferenceImageB64(String imgPath) throws URISyntaxException, IOException {
 		URL refImgUrl = getClass().getClassLoader().getResource(imgPath);
-		
-		System.out.println("refImgUrl : "+refImgUrl);
+
+		System.out.println("refImgUrl : " + refImgUrl);
 		File refImgFile = Paths.get(refImgUrl.toURI()).toFile();
 		return Base64.getEncoder().encodeToString(Files.readAllBytes(refImgFile.toPath()));
 	}
-	
-	 @BeforeTest
-	    public void init()
-	    {
-	        extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentScreenshot.html", true);
-	    }
 
-	@Test(testName = "SRide_T001" ,description = "Verifying Myrides in My rides Tag")
-    @MethodOwner(owner = "PratikChavan")
+	@BeforeTest
+	public void init() {
+		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentScreenshot.html", true);
+	}
+
+	@Test(testName = "SRide_T001", description = "Verifying Myrides in My rides Tag")
+	@MethodOwner(owner = "PratikChavan")
 	public void test() throws Exception {
 
 		test = extent.startTest("captureScreenshot");
-		
+
 		// Initialize driver
-		 driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"),
-				CapabilitiesFactory.getCapabilities());
+		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), CapabilitiesFactory.getCapabilities());
 
 		// Home Page
 
@@ -103,37 +101,27 @@ public class SRideMobileAppTest {
 
 		String refImageBase64 = getReferenceImageB64("carOwner.png");
 
-		MobileElement elementByImage = null ;
-		try {
-			elementByImage = (MobileElement) driver.findElementByImage(refImageBase64);
-		} catch (Exception e) {
-			
-		}
+		assertEquals(driver.findElementByImage(refImageBase64).isDisplayed(), true);
 
-		assertEquals(true, true);
-		
-		  test.log(LogStatus.PASS, "Test Passed");
+		test.log(LogStatus.PASS, "Test Passed");
 
 	}
-	
-    
-    @AfterMethod
-    public void getResult(ITestResult result) throws IOException
-    {
-    	
-    	Date date = new Date();
+
+	@AfterMethod
+	public void getResult(ITestResult result) throws IOException {
+
+		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("hh_mm");
 
 		String currentTimeStr = format.format(date);
-        if(result.getStatus() == ITestResult.FAILURE)
-        {
-            String screenShotPath = GetScreenShot.capture(driver, getClass().getSimpleName()+"Failure_"+currentTimeStr+"");
-            test.log(LogStatus.FAIL, result.getThrowable());
-            test.log(LogStatus.FAIL, "Snapshot below: " + test.addScreenCapture(screenShotPath));
-        }
-        extent.endTest(test);
-    }
-     
+		if (result.getStatus() == ITestResult.FAILURE) {
+			String screenShotPath = GetScreenShot.capture(driver,
+					getClass().getSimpleName() + "Failure_" + currentTimeStr + "");
+			test.log(LogStatus.FAIL, result.getThrowable());
+			test.log(LogStatus.FAIL, "Snapshot below: " + test.addScreenCapture(screenShotPath));
+		}
+		extent.endTest(test);
+	}
 
 	@AfterTest
 	public void tearDown() {
