@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="Resources"/>
+	<classpathentry kind="src" path="src/main/Resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/rs/ant-1.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/ant-launcher-1.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="D:/rs/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="D:/rs/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="D:/rs/snakeyaml-1.15.jar"/>
+	<classpathentry kind="lib" path="D:/rs/testng-6.9.9.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/bridj-0.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/commons-cli-1.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/commons-configuration-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/commons-net-3.4.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/dx-1.7.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/jgoodies-common-1.8.1.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/jgoodies-forms-1.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/jintellitype-1.3.7.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/jxgrabkey-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/jython-standalone-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/qtaste-kernel-3.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/serializer-2.7.2.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/sikuli-3.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/sikulixapi-1.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/sikulixlibslux-1.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/sikulixlibswin-1.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/swing-layout-1.0.3.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/syntaxpane-1.1.4.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/xalan-2.7.2.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="D:/rs/jar/xml-apis-1.3.04.jar"/>
+	<classpathentry kind="lib" path="C:/Users/q5255/Downloads/sikuli-api-1.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/rs/opencv-2.4.1.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
